@@ -81,7 +81,7 @@ MAX_LENGTH = 128
 ##BATCH_SIZE = 16
 BATCH_SIZE = 64
 
-EPOCHS = 2
+EPOCHS = 3
 
 LEARNING_RATE = 2e-5
 
@@ -124,7 +124,9 @@ train_data = snli["train"].filter(valid_example)
 valid_data = snli["validation"].filter(valid_example)
 
 
-
+### to speed thinbgs up
+train_data = train_data.select(range(50000))
+valid_data = valid_data.select(range(10000))
 
 # TOKENIZER
 
