@@ -79,7 +79,7 @@ MODEL_NAME = "bert-base-uncased"
 MAX_LENGTH = 128
 
 ##BATCH_SIZE = 16
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 
 EPOCHS = 3
 
@@ -125,7 +125,7 @@ valid_data = snli["validation"].filter(valid_example)
 
 
 ### to speed thinbgs up
-train_data = train_data.select(range(100000))
+train_data = train_data.select(range(200000))
 #valid_data = valid_data.select(range(2000))
 
 print(f"Set size:")
