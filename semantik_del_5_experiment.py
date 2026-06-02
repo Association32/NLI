@@ -125,7 +125,7 @@ valid_data = snli["validation"].filter(valid_example)
 
 
 ### to speed thinbgs up
-train_data = train_data.select(range(400000))
+train_data = train_data.select(range(350000))
 #valid_data = valid_data.select(range(2000))
 
 print(f"Set size:")
