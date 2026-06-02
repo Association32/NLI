@@ -413,7 +413,7 @@ for epoch in range(EPOCHS):
         optimizer.step()
 
         total_loss += loss.item()
-
+        print("Loss in batch: ", total_loss )
     avg_loss = total_loss / len(train_loader)
 
     print(
