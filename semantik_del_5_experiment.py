@@ -126,7 +126,7 @@ valid_data = snli["validation"].filter(valid_example)
 
 ### to speed thinbgs up
 train_data = train_data.select(range(50000))
-valid_data = valid_data.select(range(10000))
+valid_data = valid_data.select(range(5000))
 
 # TOKENIZER
 
