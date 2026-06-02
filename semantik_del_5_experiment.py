@@ -128,6 +128,9 @@ valid_data = snli["validation"].filter(valid_example)
 train_data = train_data.select(range(100000))
 #valid_data = valid_data.select(range(2000))
 
+print(f"Set size:")
+print(f"Train: {len(train_data)}  \t Test: {len(valid_data)}")
+
 # TOKENIZER
 
 
