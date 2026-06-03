@@ -81,7 +81,7 @@ MAX_LENGTH = 128
 ##BATCH_SIZE = 16
 BATCH_SIZE = 128
 
-EPOCHS = 3
+EPOCHS = 5
 
 LEARNING_RATE = 2e-5
 
@@ -93,7 +93,7 @@ DEVICE = torch.device(
 # load SNLI
 
 
-print("Laddar SNLI...")
+print("Loading SNLI...")
 
 #snli = load_dataset("snli") # this was wrong
 snli = load_dataset("stanfordnlp/snli")
