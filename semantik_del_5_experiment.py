@@ -81,7 +81,7 @@ MAX_LENGTH = 128
 ##BATCH_SIZE = 16
 BATCH_SIZE = 128
 
-EPOCHS = 5
+EPOCHS = 2
 
 LEARNING_RATE = 2e-5
 
@@ -125,7 +125,7 @@ valid_data = snli["validation"].filter(valid_example)
 
 
 ### to speed thinbgs up
-train_data = train_data.select(range(350000))
+train_data = train_data.select(range(375000))
 #valid_data = valid_data.select(range(2000))
 
 print(f"Set size:")
