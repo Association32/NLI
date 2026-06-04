@@ -371,8 +371,15 @@ optimizer = torch.optim.AdamW(
 
 ##EPOCHS = 20
 
+log= ""
+with open("results.txt", "w") as f:
+  f.write(log)
+
 for epoch in range(EPOCHS):
     print(f"Beginning Epoch {epoch+1}/{EPOCHS}")
+    log+=f"Beginning Epoch {epoch+1}/{EPOCHS}"
+    with open("results.txt", "w") as f:
+        f.write(log)
     model.train()
 
     total_loss = 0
@@ -416,10 +423,10 @@ for epoch in range(EPOCHS):
         print("Loss in batch: ", total_loss )
     avg_loss = total_loss / len(train_loader)
 
-    print(
-        f"Ending Epoch {epoch+1}/{EPOCHS} "
-        f"Loss: {avg_loss:.4f}"
-    )
+    print(f"Ending Epoch {epoch+1}/{EPOCHS} "f"Loss: {avg_loss:.4f}")
+    log+=f"Ending Epoch {epoch+1}/{EPOCHS} "f"Loss: {avg_loss:.4f}"
+    with open("results.txt", "w") as f:
+        f.write(log)
 
 # EVALUERING
 
@@ -462,3 +469,6 @@ with torch.no_grad():
 accuracy = correct / total
 
 print(f"\nVal Accuracy: {accuracy:.4f}")
+log+=f"\nVal Accuracy: {accuracy:.4f}"
+with open("results.txt", "w") as f:
+    f.write(log)
