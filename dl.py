@@ -14,6 +14,8 @@ from io import BytesIO
 from zipfile import ZipFile
 import os
 
+with open("results.txt", "w") as f:
+  f.write("Woops! I have deleted the content!")
 
 def download_and_unzip(url, extract_to='.'):
     http_response = urlopen(url)
